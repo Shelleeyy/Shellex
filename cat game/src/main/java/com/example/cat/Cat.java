@@ -50,6 +50,10 @@ public abstract class Cat {
         return rarity;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return String.format("Cat[name=%s, hp=%.1f, attackPower=%.1f, description=%s, profilePath=%s, fullartPath=%s]",
