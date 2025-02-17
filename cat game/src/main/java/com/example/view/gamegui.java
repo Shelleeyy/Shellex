@@ -17,6 +17,7 @@ import com.example.cat.Cat;
 
 public class gamegui extends Application{
     Image battleBackground = new Image("file:src\\main\\java\\com\\example\\media\\images\\tempBackground.jpg");
+    Image pickPokemon = new Image("file:src\\main\\java\\com\\example\\media\\images\\StarterPokemon.avif");
     Label statuslabel = new Label();
     Button attackButton = new Button("Attack");
 
@@ -46,7 +47,9 @@ public class gamegui extends Application{
 
         arg0.setTitle("Cat");
         arg0.setScene(scene);
-        arg0.show();
+        
+
+
     }
 
     public static void main(String[] args) {
