@@ -18,4 +18,14 @@ public class AttackObject {
         this.effects = effects;
         this.message = message;
     }
+
+    @Override
+    public String toString() {
+        return "AttackObject[\nattacker=" + attacker.getName() + 
+               ",\nvictim=" + victim.getName() + 
+               ",\nattackerDamage=" + attackerDamage + 
+               ",\nhealthAfter=" + healthAfter + 
+               ",\neffects=" + effects + 
+               ",\nmessage='" + message + '\'' + "\n]";
+    }
 }
