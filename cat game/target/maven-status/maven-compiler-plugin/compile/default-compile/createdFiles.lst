@@ -1,0 +1,8 @@
+com/example/cat/enums/CatRarities.class
+com/example/cat/Cat.class
+com/example/cat/enums/CatTypes.class
+module-info.class
+com/example/cat/EffectObject.class
+com/example/cat/AttackObject.class
+com/example/Main.class
+com/example/cat/common/WetCat.class

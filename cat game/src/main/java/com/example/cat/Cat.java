@@ -1,20 +1,29 @@
 package com.example.cat;
 
+import com.example.cat.enums.CatRarities;
+import com.example.cat.enums.CatTypes;
+
 public abstract class Cat {
     protected String name;
     protected double hp;
     protected double attackPower;
     protected String description;
+
+    protected CatTypes element;
+    protected CatRarities rarity;
+
     
     // IMAGES ============
     protected String profilePath;
     protected String fullartPath;
 
-    public String takeDamage(Cat attacker) { // Behavior for all cats. Just element check.
+    public AttackObject takeDamage(Cat attacker) { // Behavior for all cats. Just element check.
         if (attacker.getElement() == getElement()) {
             // this means a water attacked a water, a fire attacked a fire, etc.
-            return 
+            return new AttackObject(attacker, this, 0, hp, null, "The attack was not very effective...");
         }
+        this.hp -= attacker.getAttackPower();
+        return new AttackObject(attacker, this, attacker.getAttackPower(), this.hp, null, "The attack did " + attacker.getAttackPower() + " damage!");
     }
 
     public double getAttackPower() {
@@ -33,8 +42,12 @@ public abstract class Cat {
         return fullartPath;
     }
 
-    public CatElements getElement() {
-        return 
+    public CatTypes getElement() {
+        return element;
+    }
+
+    public CatRarities getRarity() {
+        return rarity;
     }
 
     @Override
