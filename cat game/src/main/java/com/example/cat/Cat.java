@@ -91,9 +91,6 @@ public abstract class Cat {
         return rarity;
     }
 
-    public String getName() {
-        return name;
-    }
 
     @Override
     public String toString() {
