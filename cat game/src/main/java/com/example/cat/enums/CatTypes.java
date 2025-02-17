@@ -1,5 +1,7 @@
-package com.example.cat;
+package com.example.cat.enums;
 
-public class CatTypes {
-
+public enum CatTypes {
+    FIRE,
+    WATER,
+    GRASS;
 }
