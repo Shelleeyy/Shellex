@@ -4,19 +4,17 @@ import com.example.cat.Cat;
 import com.example.cat.enums.CatRarities;
 import com.example.cat.enums.CatTypes;
 
-public class WetCat extends Cat {
+public class WeedCat extends Cat {
 
-    public WetCat() {
-        super.name = "WetCat";
-        super.description = "This cat is incredibly wet. No one knows why.";
+    public WeedCat() {
+        super.name = "WeedCat";
+        super.description = "Weedcat is it's name. It is always high.";
         super.hp = (int) (Math.random() * 10) + 1;
         super.attackPower = (int) (Math.random() * 10) + 1;
         super.profilePath = "path/to/image";
         super.fullartPath = "path/to/image";
-        super.element = CatTypes.WATER;
-        super.rarity = CatRarities.COMMON;
-
-
+        super.element = CatTypes.GRASS;
+        super.rarity = CatRarities.BASIC;
     }
 
 }
