@@ -15,7 +15,7 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import com.example.cat.Cat;
 
-public class gamegui extends Application{
+public class GameGui extends Application{
     Image battleBackground = new Image("file:src\\main\\java\\com\\example\\media\\images\\tempBackground.jpg");
     Image pickPokemon = new Image("file:src\\main\\java\\com\\example\\media\\images\\StarterPokemon.avif");
     Label statuslabel = new Label();
@@ -27,9 +27,10 @@ public class gamegui extends Application{
 
     @Override
     public void start(Stage arg0) throws Exception {
-        VBox mainbox = new VBox();
+        VBox mainBattlebox = new VBox();
         HBox actionbar = new HBox();
         // HBox buttons = new HBox();
+        
 
         statuslabel.setText("What will" + " default " + "do?");
         statuslabel.setFont(new Font("Comic Sans", 60));
@@ -42,15 +43,14 @@ public class gamegui extends Application{
 
         ImageView battleBackgroundd = new ImageView(battleBackground); 
         actionbar.getChildren().addAll(statusbar,attackButton);
-        mainbox.getChildren().addAll(battleBackgroundd, actionbar);
-        Scene scene = new Scene(mainbox);
+        mainBattlebox.getChildren().addAll(battleBackgroundd, actionbar);
+        Scene scene = new Scene(mainBattlebox);
 
         arg0.setTitle("Cat");
         arg0.setScene(scene);
-        
-
 
     }
+
 
     public static void main(String[] args) {
         launch(args);

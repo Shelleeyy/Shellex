@@ -14,7 +14,7 @@ public class CoalCat extends Cat {
         super.profilePath = "path/to/image";
         super.fullartPath = "path/to/image";
         super.element = CatTypes.FIRE;
-        super.rarity = CatRarities.BASIC;
+        super.rarity = CatRarities.COMMON;
 
     }
 
